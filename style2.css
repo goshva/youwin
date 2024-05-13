@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Great Vibes|Pacifico");
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    transform: translateY(-100%);
+
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: translateY(0);
+
+  }
+}
+
+@keyframes sizeFont {
+  0% {
+    transform: scale(15.0);
+
+
+  }
+
+  100% {
+    transform: scale(1.0);
+
+
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
 .mobile {
   position: fixed;
   text-align: center;
@@ -21,6 +53,8 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: -1;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
 }
 
 .ribbon-wrapper-green {
@@ -97,9 +131,9 @@ h1 {
   position: absolute;
   text-align: center;
   width: 90%;
-  top: 10%;
+  top: 0%;
   font-size: 4em;
-  padding: 5%;
+  padding: 2%;
   background: -webkit-linear-gradient(0deg, #ceadfc 0%, #a3bbfb 100%);
   -webkit-background-clip: text;
 
@@ -108,13 +142,22 @@ h1 {
   letter-spacing: 6px;
 }
 
-
+h2 {
+  top: 67%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  font-size: 4em;
+  /*animation: 1s ease-out 0s 1 sizeFont;*/
+}
 
 @media screen and (min-width: 670px) and (orientation: portrait) {
   .mobile {
     display: none;
   }
-
+.wrapper{
+  height: 37%;
+}
   h1,
   h2,
   span {
@@ -133,7 +176,7 @@ h1 {
     position: absolute;
     text-align: center;
     width: 90%;
-    top: 0;
+    top: -3%;
     font-size: 6em;
     padding: 5%;
     background: -webkit-linear-gradient(0deg, #ceadfc 0%, #a3bbfb 100%);
@@ -156,10 +199,10 @@ h1 {
     width: 90%;
     text-align: center;
     width: 100%;
-    top: 70%;
-    font-size: 4.5em;
+    top: 60%;
+    font-size: 6em;
     font-family: "Pacifico";
-    background: -webkit-linear-gradient(90deg, #e6c801 70%, rgb(0, 0, 0) 100%);
+    background: -webkit-linear-gradient(90deg, #e6c801 90%, rgb(0, 0, 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1251,5 +1294,4 @@ bokeh:nth-child(100) {
     margin-top: 30%;
     margin-left: 80%;
   }
-}
 }
